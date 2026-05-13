@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Language Switcher</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .khmer { font-family: 'Khmer', 'Noto Sans Khmer', sans-serif; }
+  </style>
+</head>
+<body>
+
+  <button onclick="switchLanguage('en')">English</button>
+  <button onclick="switchLanguage('km')">ខ្មែរ</button>
+
+  <h1 data-en="Hello" data-km="សួស្តី">Hello</h1>
+  <p data-en="This is a sample text." data-km="នេះជាអត្ថបទគំរូ។">This is a sample text.</p>
+  <p data-en="Welcome to my website!" data-km="សូមស្វាគមន៍មកកាន់គេហទំព័ររបស់ខ្ញុំ!">Welcome to my website!</p>
+
+  <script>
+    function switchLanguage(lang) {
+      document.documentElement.lang = lang; // Change <html> lang attribute
+
+      document.querySelectorAll('[data-en]').forEach(element => {
+        if (lang === 'en') {
+          element.textContent = element.getAttribute('data-en');
+        } else if (lang === 'km') {
+          element.textContent = element.getAttribute('data-km');
+        }
+      });
+
+      // Optional: Save preference
+      localStorage.setItem('language', lang);
+    }
+
+    // Load saved language on page load
+    window.onload = () => {
+      const savedLang = localStorage.getItem('language') || 'en';
+      switchLanguage(savedLang);
+    };
+  </script>
+
+</body>
+</html>

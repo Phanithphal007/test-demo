@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .parent{
+        width: 300px;
+    }
+    .btn{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .parent:hover .container{
+        height: 100px;
+    }
+    .container{
+        
+        width: 100%;
+        height: 0px;
+        border-radius: 10px;
+        padding:  0px 10px;
+        background-color: aquamarine;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+    .icon2{
+        display: none;
+    }
+    .parent:hover .icon1{
+        display: block;
+    }
+    .control{
+        width: 100%;
+        height: 100px;
+        margin-top: 10px;
+    }
+    a{
+       text-decoration: none;
+       margin-top: 10px;
+      
+    }
+    a:hover{
+        color: rgb(10, 80, 88);
+        text-decoration: underline;
+    }
+    
+</style>
+<body>
+    <div class="parent">
+         <button class="btn">Select Option
+            <svg class="icon1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-352.35 266.85-565.5h426.3L480-352.35Z"/></svg>
+            <svg class="icon2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M266.85-394.5 480-607.65 693.15-394.5h-426.3Z"/></svg>
+        </button>
+         <div class="container">
+               <div class="control">
+                    <a href="">Yuotube</a><br>
+                    <a href="">Yuotube</a><br>
+                    <a href="">Yuotube</a><br>
+               </div>
+         </div>
+    </div>
+</body>
+</html>

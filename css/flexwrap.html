@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<style>
+
+   *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+   }
+   body{
+      width: 100%;
+      height: 100vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+   }
+    .card{
+      width: 300px;
+      height: 450px;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding: 20px;
+      position: relative;
+      
+      overflow: hidden;
+   }
+   .cart-img{
+      width: 260px;
+      height: 300px;
+      border-radius: 10px;
+      background-color: aqua;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   }
+   .cart-img img{
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+     
+   }
+   .button-click{
+      width: 100%;
+      height: 40px;
+      background-color: aqua;
+       margin-top: 20px;
+       border-radius: 10px;
+       overflow: hidden;
+   }
+   .button-click button{
+      width: 100%;
+      height: 100%;
+      background-color: rgb(171, 230, 112);
+      border-style: none;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+     
+   }
+   .absolute{
+      width: 50px;
+      height: 100px;
+      bottom: 30px;
+      right: 0;
+      transform: translateX(50px);
+      background-color: chocolate;
+      position: absolute;
+      transition: all 0.2s ease-in-out;
+      
+   }
+   .card:hover .absolute{
+      transform: translateX(0);
+   }
+ 
+</style>
+<body>
+ <div class="card">
+      <div class="cart-img">
+         <img src="https://i.pinimg.com/736x/3b/f6/2d/3bf62d0ee50b833ee0c9a7cb6fb45c9c.jpg" alt="">
+      </div>
+      <div class="action">
+         <h3>Iphoen 14 promax</h3>
+         <div class="button-click">
+             <button>Add Card</button>
+         </div>
+      </div>
+      <div class="absolute">
+
+      </div>
+ </div>
+
+
+  
+</body>
+</html>
